@@ -1,4 +1,4 @@
-const { defineConfig, devices } = require('@playwright/test');
+const { defineConfig, devices, mergeTests } = require('@playwright/test');
 const {testConfig} =require ('./testConfig.js')
 const ENV= process.env.npm_config_ENV;
 
@@ -8,6 +8,7 @@ const ENV= process.env.npm_config_ENV;
 // }
 module.exports = defineConfig({
   timeout:120000,
+  testDir: "tests/*",
   projects:[
     {
       name: 'Chrome',
@@ -19,8 +20,8 @@ module.exports = defineConfig({
         channel: `chrome`,
 
         //Picks Base Url based on User input
-        baseURL: testConfig[ENV] || 'https://s.designfiles.co',
-
+        baseURL: testConfig[ENV] || 'https://www.hop3.app/',
+        
         //Browser Mode
         headless: false,
 
