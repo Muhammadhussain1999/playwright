@@ -1,4 +1,4 @@
-import { test as baseTest } from '@playwright/test';
+import { test as baseTest} from '@playwright/test';
 import { LoginPage } from '@pages/LoginPage';
 
 
@@ -7,4 +7,4 @@ const test = baseTest.extend({
       await use(new LoginPage(page));
     }})
 
-export{ test};
+export default test;

@@ -1,5 +1,6 @@
-import {test} from '@lib/BaseTest';
+import test from '@lib/BaseTest';
 import {expect} from '@playwright/test'
+
 test(`@Smoke login page`, async ({ loginPage }) => {
     await loginPage.navigateToURL();
     await loginPage.clickOnLoginMainButton()

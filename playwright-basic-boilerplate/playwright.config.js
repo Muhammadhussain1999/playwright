@@ -8,7 +8,6 @@ const ENV= process.env.npm_config_ENV;
 // }
 module.exports = defineConfig({
   timeout:120000,
-  testDir: "tests/*",
   projects:[
     {
       name: 'Chrome',
